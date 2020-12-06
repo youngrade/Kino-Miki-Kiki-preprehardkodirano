@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Asap Condensed', sans-serif;
+    background-color: #f4f4ef;
+}
+html, body, #komponente{
+    height: 100%;
+    background-color: #acbebe;
+}
+header{
+    background-color:#20232a;
+    
+}
+#meni{
+    display: flex;
+    flex-direction: row;
+    background-color:#20232a;
+    justify-content: center;
+}
+
+#meni a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #f4eade;
+    padding: 20px;
+    background-color:#20232a;
+}
+#meni a:hover{
+    color: #20232a;
+    background-color: #acbebe;
+    transition: .3s;
+    transform: translate(0, 3px);
+}
+#navigacija{
+    height: 300px;
+    background-color: #acbebe;
+}
+#pregled-ponude{
+    width: 800px;
+    margin: 0 auto;
+    background-color: #f4f4ef;
+}
+#pregled-ponude-dani{
+    background-color:#20232a;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#pregled-ponude-dani a{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    color: #f4eade;
+    background-color:#20232a;
+}
+#pregled-ponude-dani a:hover{
+    background-color:#a01d26;
+    transition: .2s;
+}
+.film-ponuda{
+    padding: 10px;
+    background-color: #f4f4ef;
+    border-bottom: 1px solid rgba(21, 22, 26, 0.555);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.film-ponuda-desno, .film-ponuda-lijevo{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.film-ponuda-slika{
+    padding-right: 15px;
+}
+.film-ponuda-podaci, .film-ponuda-termini{
+    padding:5px;
+}
+
+.film-ponuda-lijevo{
+    flex-direction: column;
+
+}
+.film-ponuda-rezervisi button{
+    background-color: #20232a;
+    color: #f4eade;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border: #20232a81;
+}
+.film-ponuda-rezervisi button:hover{
+    background-color: #acbebe;
+    color: #20232a;
+    transition: .2s;
+    cursor: pointer;
+}
+.film-ponuda-opsirnije a:hover{
+    color:#a01d26;
+    cursor: pointer;
+}
+.film-ponuda-podaci{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.film-ponuda-slika{
+    align-self: flex-start;
+}
+
+
