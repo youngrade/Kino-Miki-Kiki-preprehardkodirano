@@ -9,10 +9,13 @@ html, body, #komponente{
     height: 100%;
     background-color: #acbebe;
 }
+::selection{
+    background-color: #a01d26;
+    color:#f4eade;
+}
 header{
     background-color:#20232a;
     width: 100%;
-    
 }
 #meni{
     display: flex;
@@ -37,7 +40,7 @@ header{
     color: white;
     font-weight: lighter;
     transition: .3s;
-    transform: translate(0, 3px);
+    transform: translate(0, 2px);
     background-color:#7a829452;
 }
 #navigacija{
@@ -85,28 +88,27 @@ header{
 .film-ponuda-lijevo{
     position: absolute;
     right: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
 }
 .film-ponuda-slika{
     padding-right: 15px;
-    transition: .3s;
 }
 .film-ponuda-podaci, .film-ponuda-termini{
     padding:5px;
+}
+.film-ponuda-podaci p, .film-ponuda-termini p{
+    margin-top: 5px;
 }
 
 
 .film-ponuda-rezervisi button{
     background-color: #20232a;
     color: #f4eade;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     font-size: 18px;
     outline: none;
-    border: #20232a81;
+    border: 1px solid #20232a81;
     position: absolute;
     bottom: 10px;
     right: 30px;
