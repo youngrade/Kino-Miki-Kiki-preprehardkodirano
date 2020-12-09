@@ -1,139 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Asap Condensed', sans-serif;
-    background-color: #f4f4ef;
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Asap Condensed", sans-serif;
+  background-color: #f4f4ef;
 }
-html, body, #komponente{
-    height: 100%;
-    width: 100%;
-    background-color: #acbebe;
+html,
+body,
+#komponente {
+  height: 100%;
+  width: 100%;
+  background-color: #acbebe;
 }
-::selection{
-    background-color: #a01d26;
-    color:#f4eade;
+::selection {
+  background-color: #a01d26;
+  color: #f4eade;
 }
-header{
-    background-color:#20232a;
-    width: 100%;
+header {
+  background-color: #20232a;
+  width: 100%;
 }
-#meni{
-    display: flex;
-    flex-direction: row;
-    background-color:#20232a;
-    justify-content: center;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    transition: .3s;
-}
-
-#meni a{
-    text-decoration: none;
-    font-size: 22px;
-    color: #f4eade;
-    padding: 10px;
-    padding-top:20px;
-    background-color:transparent;
-    width: 100px;
-    text-align: center;
-}
-#meni a:hover{
-    color: white;
-    font-weight: lighter;
-    transition: .3s;
-    transform: translate(0, 2px);
-    background-color:#7a829452;
-}
-#navigacija{
-    height: 300px;
-    background-color: #acbebe;
-}
-#pregled-ponude{
-    width: 800px;
-    margin: 0 auto;
-    background-color: #f4f4ef;
-}
-#pregled-ponude-dani{
-    background-color:#20232a;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+#meni {
+  display: flex;
+  flex-direction: row;
+  background-color: #20232a;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  transition: 0.3s;
 }
 
-#pregled-ponude-dani a{
-    text-decoration: none;
+#meni a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #f4eade;
+  padding: 10px;
+  padding-top: 20px;
+  background-color: transparent;
+  width: 100px;
+  text-align: center;
+}
+#meni a:hover {
+  color: white;
+  font-weight: lighter;
+  transition: 0.3s;
+  transform: translate(0, 2px);
+  background-color: #7a829452;
+}
+#navigacija {
+  height: 300px;
+  background-color: #acbebe;
+}
+.pregled-ponude {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #f4f4ef;
+}
+.pregled-ponude-dani {
+  background-color: #20232a;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pregled-ponude-dani a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  color: #f4eade;
+  background-color: #20232a;
+}
+.pregled-ponude-dani a:hover {
+  background-color: #a01d26;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.film-ponuda {
+  padding: 10px 20px 10px 30px;
+  background-color: #f4f4ef;
+  border-bottom: 1px solid rgba(21, 22, 26, 0.555);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+#dan-active {
+  background-color: #a01d26;
+}
+
+.film-ponuda-desno {
+  display: flex;
+  justify-content: space-between;
+}
+.film-ponuda-lijevo {
+  position: absolute;
+  right: 50px;
+}
+.film-ponuda-slika {
+  padding-right: 15px;
+}
+.film-ponuda-podaci,
+.film-ponuda-termini {
+  padding: 5px;
+}
+.film-ponuda-podaci p,
+.film-ponuda-termini p {
+  margin-top: 5px;
+}
+
+.film-ponuda-rezervisi button {
+  background-color: #20232a;
+  color: #f4eade;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #20232a81;
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+.film-ponuda-rezervisi button:hover {
+  background-color: #acbebe;
+  color: #20232a;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.film-ponuda-opsirnije a:hover {
+  color: #a01d26;
+  cursor: pointer;
+}
+.film-ponuda-podaci {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#prazan-dan {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+@media only screen and (max-width: 600px) {
+  #meni a {
     font-size: 18px;
-    padding: 10px;
-    color: #f4eade;
-    background-color:#20232a;
-}
-#pregled-ponude-dani a:hover{
-    background-color:#a01d26;
-    transition: .2s;
-}
-.film-ponuda{
-    padding: 10px 20px 10px 30px;
-    background-color: #f4f4ef;
-    border-bottom: 1px solid rgba(21, 22, 26, 0.555);
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
-
-.film-ponuda-desno{
-    display: flex;
-    justify-content: space-between;
-}
-.film-ponuda-lijevo{
-    position: absolute;
-    right: 50px;
-
-}
-.film-ponuda-slika{
-    padding-right: 15px;
-}
-.film-ponuda-podaci, .film-ponuda-termini{
-    padding:5px;
-}
-.film-ponuda-podaci p, .film-ponuda-termini p{
-    margin-top: 5px;
-}
-
-
-.film-ponuda-rezervisi button{
-    background-color: #20232a;
-    color: #f4eade;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid #20232a81;
-    position: absolute;
-    bottom: 10px;
-    right: 30px;
-}
-.film-ponuda-rezervisi button:hover{
-    background-color: #acbebe;
-    color: #20232a;
-    transition: .2s;
-    cursor: pointer;
-}
-.film-ponuda-opsirnije a:hover{
-    color:#a01d26;
-    cursor: pointer;
-}
-.film-ponuda-podaci{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-@media only screen and (max-width: 600px){
-    #meni a{
-        font-size: 18px;
-        width: 80px;
-    }
+    width: 80px;
+  }
 }

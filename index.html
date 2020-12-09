@@ -1,123 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eKino</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="shortcut icon" href="favicon-ico.png" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="favicon-ico.png" type="image/x-icon" />
+  </head>
+  <body>
     <header>
-        <div id="meni">
-            <a href="#">POČETNA</a>
-            <a href="#">FILMOVI</a>
-            <a href="#">NAJAVE</a>
-            <a href="#">VIJESTI</a>
-            <a href="#">O NAMA</a>
-            <a href="#">KONTAKT</a>
-        </div>
+      <div id="meni">
+        <a href="#">POČETNA</a>
+        <a href="#">FILMOVI</a>
+        <a href="#">NAJAVE</a>
+        <a href="#">VIJESTI</a>
+        <a href="#">O NAMA</a>
+        <a href="#">KONTAKT</a>
+      </div>
     </header>
     <div id="komponente">
-        <div id="navigacija"></div>
-        <div id="pregled-ponude">
-            <div id="pregled-ponude-dani">
-                <a href="index.html" style="background-color: #a01d26">Petak</a>
-                <a href="index-subota.html">Subota</a>
-                <a href="" onclick="nemaProjekcija()">Nedjelja</a>
-                <a href="" onclick="nemaProjekcija()">Ponedjeljak</a>
-                <a href="" onclick="nemaProjekcija()">Utorak</a>
-                <a href="" onclick="nemaProjekcija()">Srijeda</a>
-                <a href="" onclick="nemaProjekcija()">Četvrtak</a>
-            </div>
-            <div class="film-ponuda">
-                <div class="film-ponuda-desno">         
-                     <div class="film-ponuda-slika"><img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></div>
-                    <div class="film-ponuda-podaci">
-                        <div>
-                        <h2>Joker</h2>
-                        <p>Godina: 2019</p>
-                        <p>Redatelj: Todd Phillips</p>
-                        <p>Uloge: Joaqin Phoenix, Robert De Niro</p>
-                        <p>Žanr: Drama, Triler</p>
-                        <p>Trajanje: 122 min</p>
-                    </div>
-                    <div class="film-ponuda-opsirnije">
-                        <a><h3>Opširnije...</h3></a>
-                    </div>
-                    </div>
-            </div>
-            <div class="film-ponuda-lijevo">
-                <div class="film-ponuda-termini">
-                    <h3>Sala 1</h3>
-                    <p>12:00</p>
-                    <p>17:30</p>
-                    <p>22:00</p>
-                </div>   
-            </div>
-            <div class="film-ponuda-rezervisi">
-                <button>Kupi kartu</button>
-            </div>    
-            </div>
-            <div class="film-ponuda">
-                <div class="film-ponuda-desno">         
-                     <div class="film-ponuda-slika"><img src="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_UX182_CR0,0,182,268_AL_.jpg"></div>
-                    <div class="film-ponuda-podaci">
-                        <div>
-                        <h2>Green Book</h2>
-                        <p>Godina: 2018</p>
-                        <p>Redatelj: Peter Farrelly</p>
-                        <p>Uloge: Viggo Mortensen, Mahershala Ali</p>
-                        <p>Žanr: Biografija, Komedija, Drama</p>
-                        <p>Trajanje: 130 min</p>
-                    </div>
-                    <div class="film-ponuda-opsirnije">
-                        <a><h3>Opširnije...</h3></a>
-                    </div>
-                    </div>
-            </div>
-            <div class="film-ponuda-lijevo">
-                <div class="film-ponuda-termini">
-                    <h3>Sala 2</h3>
-                    <p>15:00</p>
-                    <p>17:30</p>
-                    <p>20:00</p>
-                </div>
-            </div>
-            <div class="film-ponuda-rezervisi">
-                <button>Kupi kartu</button>
-            </div>       
-            </div>
-            <div class="film-ponuda">
-                <div class="film-ponuda-desno">         
-                     <div class="film-ponuda-slika"><img src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"></div>
-                    <div class="film-ponuda-podaci">
-                        <div>
-                        <h2>Star Wars: Epizoda V - Imperija uzvraća udarac</h2>
-                        <p>Godina: 1980</p>
-                        <p>Redatelj: George Lucas</p>
-                        <p>Uloge: Mark Hamill, Harrison Ford, Carrie Fisher</p>
-                        <p>Žanr: Akcija, Avantura, Fantazija</p>
-                        <p>Trajanje: 124 min</p>
-                    </div>
-                    <div class="film-ponuda-opsirnije">
-                        <a><h3>Opširnije...</h3></a>
-                    </div>
-                    </div>
-            </div>
-            <div class="film-ponuda-lijevo">
-                <div class="film-ponuda-termini">
-                    <h3>Sala 1</h3>
-                    <p>14:30</p>
-                    <p>19:00</p>
-                </div>    
-            </div>
-            <div class="film-ponuda-rezervisi">
-                <button>Kupi kartu</button>
-            </div>   
-            </div>
+      <div id="navigacija"></div>
+      <div class="pregled-ponude">
+        <div class="pregled-ponude-dani">
+          <a class="dan" id="dan-active">Petak</a>
+          <a class="dan">Subota</a>
+          <a class="dan">Nedjelja</a>
+          <a class="dan">Ponedjeljak</a>
+          <a class="dan">Utorak</a>
+          <a class="dan">Srijeda</a>
+          <a class="dan">Četvrtak</a>
         </div>
+        <div id="filmovi-lista">
+          <div class="film-ponuda">
+            <div class="film-ponuda-desno">
+              <div class="film-ponuda-slika">
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                />
+              </div>
+              <div class="film-ponuda-podaci">
+                <div>
+                  <h2>Joker</h2>
+                  <p>Godina: 2019</p>
+                  <p>Redatelj: Todd Phillips</p>
+                  <p>Uloge: Joaqin Phoenix, Robert De Niro</p>
+                  <p>Žanr: Drama, Triler</p>
+                  <p>Trajanje: 122 min</p>
+                </div>
+                <div class="film-ponuda-opsirnije">
+                  <a><h3>Opširnije...</h3></a>
+                </div>
+              </div>
+            </div>
+            <div class="film-ponuda-lijevo">
+              <div class="film-ponuda-termini">
+                <h3>Sala 1</h3>
+                <p>12:00</p>
+                <p>17:30</p>
+                <p>22:00</p>
+              </div>
+            </div>
+            <div class="film-ponuda-rezervisi">
+              <button>Kupi kartu</button>
+            </div>
+          </div>
+          <div class="film-ponuda">
+            <div class="film-ponuda-desno">
+              <div class="film-ponuda-slika">
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                />
+              </div>
+              <div class="film-ponuda-podaci">
+                <div>
+                  <h2>Green Book</h2>
+                  <p>Godina: 2018</p>
+                  <p>Redatelj: Peter Farrelly</p>
+                  <p>Uloge: Viggo Mortensen, Mahershala Ali</p>
+                  <p>Žanr: Biografija, Komedija, Drama</p>
+                  <p>Trajanje: 130 min</p>
+                </div>
+                <div class="film-ponuda-opsirnije">
+                  <a><h3>Opširnije...</h3></a>
+                </div>
+              </div>
+            </div>
+            <div class="film-ponuda-lijevo">
+              <div class="film-ponuda-termini">
+                <h3>Sala 2</h3>
+                <p>15:00</p>
+                <p>17:30</p>
+                <p>20:00</p>
+              </div>
+            </div>
+            <div class="film-ponuda-rezervisi">
+              <button>Kupi kartu</button>
+            </div>
+          </div>
+          <div class="film-ponuda">
+            <div class="film-ponuda-desno">
+              <div class="film-ponuda-slika">
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                />
+              </div>
+              <div class="film-ponuda-podaci">
+                <div>
+                  <h2>Star Wars: Epizoda V - Imperija uzvraća udarac</h2>
+                  <p>Godina: 1980</p>
+                  <p>Redatelj: George Lucas</p>
+                  <p>Uloge: Mark Hamill, Harrison Ford, Carrie Fisher</p>
+                  <p>Žanr: Akcija, Avantura, Fantazija</p>
+                  <p>Trajanje: 124 min</p>
+                </div>
+                <div class="film-ponuda-opsirnije">
+                  <a><h3>Opširnije...</h3></a>
+                </div>
+              </div>
+            </div>
+            <div class="film-ponuda-lijevo">
+              <div class="film-ponuda-termini">
+                <h3>Sala 1</h3>
+                <p>14:30</p>
+                <p>19:00</p>
+              </div>
+            </div>
+            <div class="film-ponuda-rezervisi">
+              <button>Kupi kartu</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-<script src="script/script.js"></script>
-</body>
+    <script src="script/dani.js"></script>
+    <script src="script/script.js"></script>
+  </body>
 </html>
