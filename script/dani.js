@@ -23,13 +23,14 @@ const petak = `
             <div class="film-ponuda-lijevo">
               <div class="film-ponuda-termini">
                 <h3>Sala 1</h3>
-                <p>12:00</p>
-                <p>17:30</p>
-                <p>22:00</p>
+                <p>15:00</p>
+                <p>18:00</p>
+                <p>20:30</p>
+                <p>23:00</p>
               </div>
             </div>
             <div class="film-ponuda-rezervisi">
-              <button>Kupi kartu</button>
+              <button onclick="rezervisiSjedista()">Kupi kartu</button>
             </div>
           </div>
           <div class="film-ponuda">

@@ -9,15 +9,139 @@
   </head>
   <body>
     <header>
-      <div id="meni">
-        <a href="#">POČETNA</a>
-        <a href="#">FILMOVI</a>
-        <a href="#">NAJAVE</a>
-        <a href="#">VIJESTI</a>
-        <a href="#">O NAMA</a>
-        <a href="#">KONTAKT</a>
+      <div class="meni">
+        <a href="#" class="navbar-element" id="navbar-active">POČETNA</a>
+        <a href="#" class="navbar-element">FILMOVI</a>
+        <a href="#" class="navbar-element">NAJAVE</a>
+        <a href="#" class="navbar-element">VIJESTI</a>
+        <a href="#" class="navbar-element">O NAMA</a>
+        <a href="#" class="navbar-element">KONTAKT</a>
       </div>
     </header>
+    <div id="shadow-box">
+      <div class="seats-container">
+        <div
+          style="
+            background-color: transparent;
+            color: #f4f4ef;
+            margin: 10px;
+            font-size: 50px;
+          "
+        >
+          Joker
+        </div>
+        <div id="seats-container-x">
+          <img
+            src="img/x-icon.png"
+            style="background: transparent; height: 40px"
+            onclick="rezervacijaZatvori()"
+          />
+        </div>
+        <div class="seats-container-gornji-div">
+          <div
+            class="seats-container-slika"
+            style="background: transparent; margin-right: 30px"
+          >
+            <img
+              height="170px"
+              ;
+              src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+            />
+          </div>
+          <div class="seats-container-odabir">
+            <div class="seats-container-datum-rezervacije">
+              Petak, 18.12.2020.
+              <br />
+              <label style="background: transparent; font-size: 18px"
+                >Cijena karte: 5 KM
+              </label>
+            </div>
+            <label style="background: transparent">Odaberi termin</label>
+            <br />
+            <select name="selekcija" id="selekcija">
+              <option value="15:00">15:00</option>
+              <option value="18:00">18:00</option>
+              <option value="20:30">20:30</option>
+              <option value="23:00">23:00</option>
+            </select>
+            <br />
+            <label style="background: transparent"
+              >Odabranih sjedišta:
+              <span id="ukupno-sjedista" style="background: transparent"
+                >0</span
+              ></label
+            >
+          </div>
+        </div>
+        <div class="odabir-sjedista-legenda">
+          <div class="odabir-sjedista-legenda-red">
+            <p style="background: #acbebe"></p>
+            Slobodno
+          </div>
+          <div class="odabir-sjedista-legenda-red">
+            <p style="background: #a01d26"></p>
+            Zauzeto
+          </div>
+          <div class="odabir-sjedista-legenda-red">
+            <p style="background: gold"></p>
+            Odabrano
+          </div>
+        </div>
+        <div id="trapezoid"></div>
+        <div class="seats-row">
+          <div class="seat">A1</div>
+          <div class="seat-zauzeto">A2</div>
+          <div class="seat-zauzeto">A3</div>
+          <div class="seat">A4</div>
+          <div class="seat">A5</div>
+          <div class="seat-zauzeto">A6</div>
+          <div class="seat-zauzeto">A7</div>
+        </div>
+        <div class="seats-row">
+          <div class="seat">B1</div>
+          <div class="seat-zauzeto">B2</div>
+          <div class="seat-zauzeto">B3</div>
+          <div class="seat-zauzeto">B4</div>
+          <div class="seat-zauzeto">B5</div>
+          <div class="seat-zauzeto">B6</div>
+          <div class="seat">B7</div>
+        </div>
+        <div class="seats-row">
+          <div class="seat">C1</div>
+          <div class="seat">C2</div>
+          <div class="seat">C3</div>
+          <div class="seat-zauzeto">C4</div>
+          <div class="seat-zauzeto">C5</div>
+          <div class="seat">C6</div>
+          <div class="seat">C7</div>
+        </div>
+        <div class="seats-row">
+          <div class="seat">D1</div>
+          <div class="seat-zauzeto">D2</div>
+          <div class="seat-zauzeto">D3</div>
+          <div class="seat-zauzeto">D4</div>
+          <div class="seat-zauzeto">D5</div>
+          <div class="seat">D6</div>
+          <div class="seat">D7</div>
+        </div>
+        <div class="seats-row">
+          <div class="seat">E1</div>
+          <div class="seat">E2</div>
+          <div class="seat-zauzeto">E3</div>
+          <div class="seat-zauzeto">E4</div>
+          <div class="seat">E5</div>
+          <div class="seat-zauzeto">E6</div>
+          <div class="seat-zauzeto">E7</div>
+        </div>
+
+        <div class="seats-container-donji-div">
+          <div id="ukupno-za-platiti">
+            Ukupno za platiti: <span id="za-platiti-span">0</span> KM
+          </div>
+          <div id="rezervisi-btn"><button>Rezerviši</button></div>
+        </div>
+      </div>
+    </div>
     <div id="komponente">
       <div id="navigacija"></div>
       <div class="pregled-ponude">
@@ -55,13 +179,14 @@
             <div class="film-ponuda-lijevo">
               <div class="film-ponuda-termini">
                 <h3>Sala 1</h3>
-                <p>12:00</p>
-                <p>17:30</p>
-                <p>22:00</p>
+                <p>15:00</p>
+                <p>18:00</p>
+                <p>20:30</p>
+                <p>23:00</p>
               </div>
             </div>
             <div class="film-ponuda-rezervisi">
-              <button>Kupi kartu</button>
+              <button onclick="rezervisiSjedista()">Kupi kartu</button>
             </div>
           </div>
           <div class="film-ponuda">
@@ -120,9 +245,10 @@
             </div>
             <div class="film-ponuda-lijevo">
               <div class="film-ponuda-termini">
-                <h3>Sala 1</h3>
+                <h3>Sala 3</h3>
                 <p>14:30</p>
-                <p>19:00</p>
+                <p>17:00</p>
+                <p>20:30</p>
               </div>
             </div>
             <div class="film-ponuda-rezervisi">
@@ -134,5 +260,6 @@
     </div>
     <script src="script/dani.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/kupikartu.js"></script>
   </body>
 </html>

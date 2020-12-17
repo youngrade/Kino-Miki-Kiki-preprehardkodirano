@@ -7,17 +7,18 @@ const repertoar = {
   "Subota": subota,
   "Nedjelja": '<h3 id="prazan-dan">Nema zakazanih projekcija!</h3>',
 };
-const meni = document.getElementById("meni").style;
+const meni = document.querySelector(".meni").style;
 
 function nemaProjekcija() {
   alert("Nema zakazanih projekcija za odabrani dan, pa tek smo počeli jarane");
 }
 window.addEventListener("scroll", () => {
   if (this.scrollY === 0) {
-    meni.backgroundColor = "#20232a";
-    meni.height = meniHeight;
+    meni.opacity = "1";
+    //meni.backgroundColor = "#20232a";
   } else {
-    meni.backgroundColor = "#20232aad";
+    meni.opacity = "0.95";
+    //meni.backgroundColor = "#20232aad";
   }
 });
 
@@ -30,4 +31,14 @@ for (let i = 0; i < dani.length; i++) {
     document.getElementById("filmovi-lista").innerHTML =
       repertoar[e.target.innerText];
   });
+}
+function rezervisiSjedista() {
+  document.getElementById("shadow-box").style.zIndex = "3";
+  document.getElementById("shadow-box").style.height = "100%";
+  document.querySelector(".seats-container").style.opacity = "1";
+}
+function rezervacijaZatvori() {
+  document.getElementById("shadow-box").style.zIndex = "-1";
+  document.getElementById("shadow-box").style.height = "0%";
+  document.querySelector(".seats-container").style.opacity = "0";
 }
