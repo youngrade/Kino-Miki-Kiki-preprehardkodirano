@@ -53,12 +53,14 @@
               Petak, 18.12.2020.
               <br />
               <label style="background: transparent; font-size: 18px"
-                >Cijena karte: 5 KM
+                >Cijena karte:
+                <span id="cijena-karte" style="background: transparent">5</span>
+                KM
               </label>
             </div>
             <label style="background: transparent">Odaberi termin</label>
             <br />
-            <select name="selekcija" id="selekcija">
+            <select name="selekcija" id="selekcija" onchange="odabirTermina()">
               <option value="15:00">15:00</option>
               <option value="18:00">18:00</option>
               <option value="20:30">20:30</option>
@@ -88,57 +90,63 @@
           </div>
         </div>
         <div id="trapezoid"></div>
-        <div class="seats-row">
-          <div class="seat">A1</div>
-          <div class="seat-zauzeto">A2</div>
-          <div class="seat-zauzeto">A3</div>
-          <div class="seat">A4</div>
-          <div class="seat">A5</div>
-          <div class="seat-zauzeto">A6</div>
-          <div class="seat-zauzeto">A7</div>
+        <div id="seats-all" style="background: transparent">
+          <div class="seats-row">
+            <div class="seat">A1</div>
+            <div class="seat-zauzeto">A2</div>
+            <div class="seat-zauzeto">A3</div>
+            <div class="seat">A4</div>
+            <div class="seat">A5</div>
+            <div class="seat-zauzeto">A6</div>
+            <div class="seat-zauzeto">A7</div>
+          </div>
+          <div class="seats-row">
+            <div class="seat">B1</div>
+            <div class="seat-zauzeto">B2</div>
+            <div class="seat-zauzeto">B3</div>
+            <div class="seat-zauzeto">B4</div>
+            <div class="seat-zauzeto">B5</div>
+            <div class="seat-zauzeto">B6</div>
+            <div class="seat">B7</div>
+          </div>
+          <div class="seats-row">
+            <div class="seat">C1</div>
+            <div class="seat">C2</div>
+            <div class="seat">C3</div>
+            <div class="seat-zauzeto">C4</div>
+            <div class="seat-zauzeto">C5</div>
+            <div class="seat">C6</div>
+            <div class="seat">C7</div>
+          </div>
+          <div class="seats-row">
+            <div class="seat">D1</div>
+            <div class="seat-zauzeto">D2</div>
+            <div class="seat-zauzeto">D3</div>
+            <div class="seat-zauzeto">D4</div>
+            <div class="seat-zauzeto">D5</div>
+            <div class="seat">D6</div>
+            <div class="seat">D7</div>
+          </div>
+          <div class="seats-row">
+            <div class="seat">E1</div>
+            <div class="seat">E2</div>
+            <div class="seat-zauzeto">E3</div>
+            <div class="seat-zauzeto">E4</div>
+            <div class="seat">E5</div>
+            <div class="seat-zauzeto">E6</div>
+            <div class="seat-zauzeto">E7</div>
+          </div>
         </div>
-        <div class="seats-row">
-          <div class="seat">B1</div>
-          <div class="seat-zauzeto">B2</div>
-          <div class="seat-zauzeto">B3</div>
-          <div class="seat-zauzeto">B4</div>
-          <div class="seat-zauzeto">B5</div>
-          <div class="seat-zauzeto">B6</div>
-          <div class="seat">B7</div>
+        <div id="seats-container-ponisti">
+          <button onclick="ponistiOdabranaSjedista()">Poništi</button>
         </div>
-        <div class="seats-row">
-          <div class="seat">C1</div>
-          <div class="seat">C2</div>
-          <div class="seat">C3</div>
-          <div class="seat-zauzeto">C4</div>
-          <div class="seat-zauzeto">C5</div>
-          <div class="seat">C6</div>
-          <div class="seat">C7</div>
-        </div>
-        <div class="seats-row">
-          <div class="seat">D1</div>
-          <div class="seat-zauzeto">D2</div>
-          <div class="seat-zauzeto">D3</div>
-          <div class="seat-zauzeto">D4</div>
-          <div class="seat-zauzeto">D5</div>
-          <div class="seat">D6</div>
-          <div class="seat">D7</div>
-        </div>
-        <div class="seats-row">
-          <div class="seat">E1</div>
-          <div class="seat">E2</div>
-          <div class="seat-zauzeto">E3</div>
-          <div class="seat-zauzeto">E4</div>
-          <div class="seat">E5</div>
-          <div class="seat-zauzeto">E6</div>
-          <div class="seat-zauzeto">E7</div>
-        </div>
-
         <div class="seats-container-donji-div">
           <div id="ukupno-za-platiti">
             Ukupno za platiti: <span id="za-platiti-span">0</span> KM
           </div>
-          <div id="rezervisi-btn"><button>Rezerviši</button></div>
+          <div id="rezervisi-btn">
+            <button id="btn-blocked">Rezerviši</button>
+          </div>
         </div>
       </div>
     </div>
@@ -259,6 +267,7 @@
       </div>
     </div>
     <script src="script/dani.js"></script>
+    <script src="script/joker-projekcije.js"></script>
     <script src="script/script.js"></script>
     <script src="script/kupikartu.js"></script>
   </body>
