@@ -6,6 +6,7 @@ var slobodnaSjedista = null;
 const odabranihSjedista = document.getElementById("ukupno-sjedista");
 const zaPlatiti = document.getElementById("za-platiti-span");
 const cijenaKarte = document.getElementById("cijena-karte");
+var cijenaZaPlatiti;
 
 inicijalizujSlobodnaSjedista();
 function inicijalizujSlobodnaSjedista() {
@@ -68,7 +69,15 @@ function provjeriDugme() {
   let dugme = document.querySelector("#rezervisi-btn button");
   if (zaPlatiti.innerText == 0) {
     dugme.id = "btn-blocked";
+    return false;
   } else {
     dugme.id = "btn-rezervisi";
+    return true;
+  }
+}
+function platiRezervaciju() {
+  if (provjeriDugme()) {
+    document.getElementById("payment-container").style.display = "flex";
+    document.querySelector(".seats-container").style.opacity = 0;
   }
 }

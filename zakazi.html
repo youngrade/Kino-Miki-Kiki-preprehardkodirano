@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eKino</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style-bullet-points.css" />
+
+    <link rel="shortcut icon" href="favicon-ico.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="meni">
+        <a href="index.html" class="navbar-element">POČETNA</a>
+        <a href="#" class="navbar-element">FILMOVI</a>
+        <a href="#" class="navbar-element">NAJAVE</a>
+        <a href="#" class="navbar-element">VIJESTI</a>
+        <a href="#" class="navbar-element">O NAMA</a>
+        <a href="#" class="navbar-element">KONTAKT</a>
+        <a href="zakazi.html" class="navbar-element" id="navbar-active"
+          >ADMIN</a
+        >
+      </div>
+    </header>
+
+    <div id="komponente">
+      <div id="zakazivanje-container">
+        <div id="zakazivanje-container-slika">
+          <img
+            src="https://gooloc.com/wp-content/uploads/vector/36/rnoquhaqlke.jpg"
+          />
+          <br />
+          <h2></h2>
+        </div>
+        <div id="zakazivanje-container-opcije">
+          <div>
+            <div class="zakazivanje-komponenta">
+              <label>Film</label>
+              <br />
+              <select class="film-select" name="film" onchange="prikaziSliku()">
+                <option
+                  value="https://gooloc.com/wp-content/uploads/vector/36/rnoquhaqlke.jpg"
+                >
+                  Odaberi film
+                </option>
+                <option
+                  value="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                >
+                  Joker
+                </option>
+                <option
+                  value="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                >
+                  Green Book
+                </option>
+                <option
+                  value="https://m.media-amazon.com/images/M/MV5BNWY5Nzk3NzctMWM1Ni00ZTM2LWJhMzgtYjdiMTZmODczM2U2XkEyXkFqcGdeQXVyNTgzMjIwMjM@._V1_UY268_CR1,0,182,268_AL_.jpg"
+                >
+                  Brat 2
+                </option>
+                <option
+                  value="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                >
+                  Star Wars V
+                </option>
+              </select>
+            </div>
+            <div class="zakazivanje-komponenta">
+              <input type="checkbox" name="sala" checked /> Sala 1
+              <br />
+              <input type="checkbox" name="sala" /> Sala 2
+              <br />
+              <input type="checkbox" name="sala" /> Sala 3
+              <br />
+            </div>
+            <div class="zakazivanje-komponenta">
+              <label>Vrijeme</label> <br /><input type="time" />
+            </div>
+            <div class="zakazivanje-komponenta" style="margin-top: 60px">
+              <input type="checkbox" /> COVID-19 mjere
+            </div>
+          </div>
+          <div>
+            <div class="zakazivanje-komponenta">
+              <label>Datum</label>
+              <br />
+              <input id="datumOdabir" type="date" />
+            </div>
+            <div class="zakazivanje-komponenta">
+              <input
+                id="radio-za-danas"
+                type="radio"
+                name="sala"
+                checked
+                onclick="omoguciKrajnjiDatum()"
+              />
+              Zakaži samo za odabrani dan <br /><input
+                type="radio"
+                name="sala"
+                onclick="omoguciKrajnjiDatum()"
+              />
+              Zakaži svaki dan<br />
+              <input type="radio" name="sala" onclick="omoguciKrajnjiDatum()" />
+              Zakaži svakih 7 dana
+            </div>
+            <div class="zakazivanje-komponenta" id="krajnji-datum-div">
+              <label>Krajnji datum</label>
+              <br />
+              <input id="krajnji-datum" type="date" disabled />
+            </div>
+            <div class="zakazivanje-komponenta" style="margin-top: 40px">
+              <button id="film-zakazi-btn">Zakaži</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+    <script src="script/zakazivanje.js"></script>
+  </body>
+</html>

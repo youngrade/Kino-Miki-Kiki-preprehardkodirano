@@ -5,20 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eKino</title>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style-bullet-points.css" />
+
     <link rel="shortcut icon" href="favicon-ico.png" type="image/x-icon" />
   </head>
   <body>
     <header>
       <div class="meni">
-        <a href="#" class="navbar-element" id="navbar-active">POČETNA</a>
+        <a href="index.html" class="navbar-element" id="navbar-active"
+          >POČETNA</a
+        >
         <a href="#" class="navbar-element">FILMOVI</a>
         <a href="#" class="navbar-element">NAJAVE</a>
         <a href="#" class="navbar-element">VIJESTI</a>
         <a href="#" class="navbar-element">O NAMA</a>
         <a href="#" class="navbar-element">KONTAKT</a>
+        <a href="zakazi.html" class="navbar-element">ADMIN</a>
       </div>
     </header>
     <div id="shadow-box">
+      <div id="payment-container">
+        <h2 style="padding: 30px; background: transparent">
+          Odaberi način plaćanja
+        </h2>
+        <div id="pay-method-select" style="background: transparent">
+          <label class="container" id="kartica">
+            <input
+              type="radio"
+              checked="checked"
+              onclick="odaberiMetodu(event)"
+              name="radio"
+              value="kartica"
+            />
+            <span>Kartica</span>
+            <img src="img/credit-cards.png" height="60px" />
+          </label>
+          <br />
+          <label class="container" id="paypal">
+            <input
+              type="radio"
+              name="radio"
+              value="paypal"
+              onclick="odaberiMetodu(event)"
+            />
+            <span>Paypal</span>
+            <img src="img/paypal.png" height="70px" />
+          </label>
+        </div>
+
+        <form id="placanje-forma">
+          <div>
+            <label>Ime</label>
+            <input placeholder="John" />
+          </div>
+          <div>
+            <label>Prezime</label>
+            <input placeholder="Doe" />
+          </div>
+          <div>
+            <label>Broj kartice</label>
+            <input placeholder="4242 4242 4242 4242" />
+          </div>
+          <div id="cvv">
+            <div>
+              <label>Godina isteka</label>
+              <input placeholder="2020" style="width: 200px" />
+            </div>
+            <div>
+              <label>CVV</label>
+              <input placeholder="cvv" style="width: 150px" />
+            </div>
+          </div>
+        </form>
+        <div id="pay-method-ukupno">
+          Ukupno za platiti: <span id="pay-method-span"></span>.00 KM
+        </div>
+        <div id="pay-dugmad">
+          <button id="btn-nazad" onclick="nazad()">Nazad</button>
+          <button id="btn-blocked">Plati</button>
+        </div>
+      </div>
       <div class="seats-container">
         <div
           style="
@@ -145,7 +211,9 @@
             Ukupno za platiti: <span id="za-platiti-span">0</span> KM
           </div>
           <div id="rezervisi-btn">
-            <button id="btn-blocked">Rezerviši</button>
+            <button id="btn-blocked" onclick="platiRezervaciju()">
+              Rezerviši
+            </button>
           </div>
         </div>
       </div>
@@ -270,5 +338,6 @@
     <script src="script/joker-projekcije.js"></script>
     <script src="script/script.js"></script>
     <script src="script/kupikartu.js"></script>
+    <script src="script/plati.js"></script>
   </body>
 </html>

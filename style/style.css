@@ -3,14 +3,12 @@
   padding: 0;
   margin: 0;
   font-family: "Asap Condensed", sans-serif;
-  background-color: #f4f4ef;
 }
 html,
 body,
 #komponente {
   height: 100%;
   width: 100%;
-  background-color: #acbebe;
   background: url("../background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -74,7 +72,8 @@ header {
   justify-content: center;
   align-items: center;
 }
-.seats-container {
+.seats-container,
+#payment-container {
   transition: 0.8s;
   background: linear-gradient(
     180deg,
@@ -95,6 +94,16 @@ header {
   border-top-right-radius: 60px;
   border-bottom-right-radius: 20px;
   color: #f4eade;
+}
+#payment-container {
+  background: white;
+  background-color: white;
+  color: black;
+  border: none;
+  position: absolute;
+  z-index: 6;
+  opacity: 1;
+  display: none;
 }
 .seats-container-gornji-div {
   background: transparent;
@@ -275,7 +284,8 @@ header {
   background: transparent;
 }
 #btn-rezervisi,
-#btn-blocked {
+#btn-blocked,
+#btn-nazad {
   background-color: #20232a;
   color: #f4eade;
   border-radius: 10px;
@@ -304,10 +314,21 @@ header {
   box-shadow: 1px -11px 29px -5px rgba(0, 0, 0, 0.35);
 }
 #btn-rezervisi:hover,
-#seats-container-ponisti button:hover {
+#seats-container-ponisti button:hover,
+#film-zakazi-btn:hover {
   background: gold;
   color: rgb(24, 24, 24);
   transition: 0.3s;
+}
+#film-zakazi-btn {
+  background-color: #20232a;
+  color: #f4eade;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #20232a81;
+  width: 90%;
 }
 
 .film-ponuda-rezervisi button {
@@ -341,6 +362,48 @@ header {
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+#zakazivanje-container {
+  box-sizing: border-box;
+  padding: 120px 30px 30px 30px;
+  background-color: #fffaf5;
+  border-radius: 5px;
+  color: #20232a;
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  font-size: 20px;
+}
+.zakazivanje-komponenta input[type="checkbox"] {
+  zoom: 1.5;
+}
+#zakazivanje-container-slika {
+  height: 300px;
+  width: 200px;
+  background-color: gray;
+  margin-right: 40px;
+}
+#zakazivanje-container-slika img {
+  height: 100%;
+  width: 100%;
+}
+#zakazivanje-container-opcije {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.zakazivanje-komponenta {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+#zakazivanje-container-opcije input,
+#zakazivanje-container-opcije select {
+  font-size: 20px;
+}
+#krajnji-datum-div {
+  opacity: 0;
 }
 @media only screen and (max-width: 600px) {
   .meni a {
